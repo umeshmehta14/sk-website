@@ -6,15 +6,15 @@ export const navigation = {
   py: { base: "2", md: "4" },
   alignItems: "center",
   position: "relative",
+  zIndex: "1",
 };
 
 export const smNavilink = {
   position: "absolute",
   top: "3.5rem",
-  left: 0,
   right: 0,
   h: "92vh",
-  w: "100vw",
+  w: "55vw",
   fontSize: "1.8rem",
   bgColor: "white",
   color: "black",
@@ -23,12 +23,13 @@ export const smNavilink = {
   py: "1rem",
   gap: "1.4rem",
   display: { base: "flex", md: "none" },
+  zIndex: "300",
 };
 
 export const mdNavlink = {
   display: { base: "none", md: "flex" },
   fontSize: "1.2rem",
-  w: { md: "60%", lg: "40%" },
+  w: { md: "60%", lg: "45%" },
   justifyContent: "space-between",
   alignItems: "center",
 };

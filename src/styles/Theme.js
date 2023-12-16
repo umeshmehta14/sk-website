@@ -16,9 +16,12 @@ const colors = {
   },
 };
 
+// font-family: 'Kalnia', serif;
+// font-family: 'Mukta', sans-serif;
+
 const fonts = {
-  heading: "Lora, serif",
-  body: "'Lora', serif",
+  heading: "'Kalnia', serif",
+  body: "'Mukta', sans-serif",
 };
 
 const styles = {
@@ -45,6 +48,7 @@ export const components = {
       _focus: {
         boxShadow: "transparent",
       },
+      position: "static",
     },
     variants: {
       "link-button": {

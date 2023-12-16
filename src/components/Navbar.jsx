@@ -2,7 +2,6 @@ import { Flex, Heading } from "@chakra-ui/react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import { GiHamburgerMenu, RxCross1 } from "../assets/Icons";
-import { useState } from "react";
 import {
   mdActiveLink,
   mdNavlink,
@@ -10,9 +9,10 @@ import {
   smActiveLink,
   smNavilink,
 } from "../styles/NavbarStyle";
+import { useData } from "../contexts/DataContext";
 
 const Navbar = () => {
-  const [hamburger, setHamburger] = useState(false);
+  const { hamburger, setHamburger } = useData();
   const navigate = useNavigate();
 
   const getStyle = ({ isActive }) => {
@@ -27,7 +27,7 @@ const Navbar = () => {
       <Flex {...navigation}>
         <Heading
           onClick={() => {
-            navigate("/home");
+            navigate("/");
             setHamburger(false);
           }}
           cursor={"pointer"}
@@ -37,7 +37,7 @@ const Navbar = () => {
         {hamburger && (
           <Flex {...smNavilink}>
             <NavLink
-              to="/home"
+              to="/"
               className="sm-navlink"
               style={getSmStyle}
               onClick={() => setHamburger(!hamburger)}
@@ -92,7 +92,7 @@ const Navbar = () => {
           )}
         </Flex>
         <Flex {...mdNavlink}>
-          <NavLink style={getStyle} className="md-navlink" to="/home">
+          <NavLink style={getStyle} className="md-navlink" to="/">
             Home
           </NavLink>
           <NavLink style={getStyle} className="md-navlink" to="/aboutUs">
