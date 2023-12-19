@@ -1,29 +1,28 @@
 export const navigation = {
-  bg: "red.800",
+  bg: "linear-gradient(90deg, rgba(255,227,246,1) 0%, rgba(227,38,54,1) 65%);",
   color: "white.500",
   justifyContent: "space-between",
   px: { base: "2", md: "4" },
-  py: { base: "2", md: "4" },
+  py: { base: "1", md: "0" },
   alignItems: "center",
   position: "relative",
-  zIndex: "1",
 };
 
 export const smNavilink = {
   position: "absolute",
-  top: "3.5rem",
+  top: "3.9rem",
   right: 0,
   h: "92vh",
-  w: "55vw",
   fontSize: "1.8rem",
   bgColor: "white",
   color: "black",
   flexDir: { base: "column", md: "row" },
   alignItems: "center",
   py: "1rem",
-  gap: "1.4rem",
+  gap: "0.3rem",
   display: { base: "flex", md: "none" },
   zIndex: "300",
+  boxShadow: "-5px 0px 20px #808080ad",
 };
 
 export const mdNavlink = {
@@ -35,16 +34,11 @@ export const mdNavlink = {
 };
 
 export const mdActiveLink = {
-  backgroundColor: "rgb(255 129 129 / 67%)",
-  color: "black",
-  borderRadius: "14px",
-  textDecoration: "underline",
+  color: "yellow",
+  borderBottom: "3px solid white",
 };
 
 export const smActiveLink = {
-  backgroundColor: "black",
-  color: "white",
-  borderRadius: "20px",
-  boxShadow: "1px 1px 10px blue",
-  textDecoration: "underline",
+  color: "red",
+  borderBottom: "2px solid red",
 };

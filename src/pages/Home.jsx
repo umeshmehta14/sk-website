@@ -3,15 +3,23 @@ import {
   Image,
   Text,
   Heading,
-  VStack,
   Button,
   Box,
+  VStack,
 } from "@chakra-ui/react";
-import hero_img from "../assets/images/hero_img.jpg";
+import {
+  ExpertInstructor,
+  hero_img,
+  IndividualAttention,
+  PracticalCareer,
+  PracticalLearning,
+  WhyChoose,
+} from "../assets/images";
+import { svgStyle, whyChooseBox } from "../styles/HomeStyles";
 
 export const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <Flex flexDir={"column"}>
         <Box className="hero-img">
           <Image
@@ -35,7 +43,7 @@ export const Home = () => {
           w={{ base: "100%", md: "50%" }}
           m={{ base: "0", md: "8rem 0 0 6rem" }}
         >
-          <Heading display={"flex"} flexWrap={"wrap"}>
+          <Heading display={"flex"} flexWrap={"wrap"} fontFamily={"heading2"}>
             <Box>
               Empower Your Future with{" "}
               <Text
@@ -69,6 +77,93 @@ export const Home = () => {
             Register Now
           </Button>
         </Flex>
+      </Flex>
+
+      <Heading fontFamily={"heading2"} textAlign={"center"}>
+        Why Choose SK Computer Institute?
+      </Heading>
+
+      <Flex
+        flexDirection={{ base: "column", md: "row" }}
+        flexWrap={"wrap"}
+        gap={"2rem"}
+        m={"auto"}
+        w={{ base: "100%", md: "80%" }}
+        justifyContent={"space-between"}
+      >
+        {/* <WhyChoose /> */}
+
+        <VStack {...whyChooseBox}>
+          <VStack gap={"0.5rem"} padding={"1rem"} h={"265px"}>
+            <Heading {...svgStyle}>Expert Instructors</Heading>
+            <ExpertInstructor />
+          </VStack>
+          <VStack gap={"0.5rem"} borderTop={"1px solid gray"} p={"1rem"}>
+            <Text>
+              Our faculty is made up of experienced teachers and industry
+              specialists with a wealth of knowledge in their respective
+              specialties.
+            </Text>
+            <Text>
+              Enjoy a well-rounded learning experience by taking use of their
+              vast knowledge and real-world insights.
+            </Text>
+          </VStack>
+        </VStack>
+
+        <VStack {...whyChooseBox}>
+          <VStack gap={"0.5rem"} padding={"1rem"} h={"265px"}>
+            <Heading {...svgStyle}>Individualized Attention</Heading>
+            <IndividualAttention />
+          </VStack>
+          <VStack gap={"0.5rem"} borderTop={"1px solid gray"} p={"1rem"}>
+            <Text>
+              We are aware of how different every student is. For this reason,
+              we give each learner individualised attention.
+            </Text>
+            <Text>
+              Small class sizes help teachers to address the requirements of
+              every student individually, creating a collaborative and
+              supportive learning atmosphere.
+            </Text>
+          </VStack>
+        </VStack>
+
+        <VStack {...whyChooseBox}>
+          <VStack gap={"0.5rem"} padding={"1rem"} h={"265px"}>
+            <Heading {...svgStyle}>Practical Learning Environment</Heading>
+            <PracticalLearning />
+          </VStack>
+          <VStack gap={"0.5rem"} borderTop={"1px solid gray"} p={"1rem"}>
+            <Text>
+              Learn by doing is our leading concept at SK Computer Institute.
+              Practical projects that apply theory are highlighted in our
+              courses.
+            </Text>
+            <Text>
+              Learn practical skills that can help you succeed in your future
+              learning or career goals.
+            </Text>
+          </VStack>
+        </VStack>
+
+        <VStack {...whyChooseBox}>
+          <VStack gap={"0.5rem"} padding={"1rem"} h={"265px"}>
+            <Heading {...svgStyle}>Practical Career Guidance</Heading>
+            <PracticalCareer />
+          </VStack>
+          <VStack gap={"0.5rem"} borderTop={"1px solid gray"} p={"1rem"}>
+            <Text>
+              SK Computer Institute is more than just a theoretical institution.
+              We provide helpful career advice and support to enable you to make
+              well-informed decisions on your future.
+            </Text>
+            <Text>
+              Take advantage of our workshops on interview preparation, resume
+              development, and career counselling.
+            </Text>
+          </VStack>
+        </VStack>
       </Flex>
     </div>
   );

@@ -20,7 +20,8 @@ const colors = {
 // font-family: 'Mukta', sans-serif;
 
 const fonts = {
-  heading: "'Kalnia', serif",
+  heading: "'Dancing Script', cursive",
+  heading2: "'Kalnia', serif",
   body: "'Mukta', sans-serif",
 };
 
