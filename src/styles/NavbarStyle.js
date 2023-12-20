@@ -10,7 +10,7 @@ export const navigation = {
 
 export const smNavilink = {
   position: "absolute",
-  top: "3.9rem",
+  top: "3.95rem",
   right: 0,
   h: "92vh",
   fontSize: "1.8rem",

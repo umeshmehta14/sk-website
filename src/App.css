@@ -71,6 +71,13 @@ body {
   position: relative;
 }
 
+.home-hr {
+  padding: 0.2rem;
+  width: 96px;
+  background-color: #ff3c4c;
+  border-radius: 16px;
+}
+
 @media (min-width: 768px) {
 
   body {
