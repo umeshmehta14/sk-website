@@ -8,6 +8,14 @@ export const navigation = {
   position: "relative",
 };
 
+export const headingMain = {
+  alignItems: "center",
+  gap: "0.5rem",
+  cursor: "pointer",
+  fontWeight: "bolder",
+  p: { base: "0.2rem 0rem", md: "0.2rem 1rem" },
+};
+
 export const smNavilink = {
   position: "absolute",
   top: "3.95rem",
@@ -42,3 +50,7 @@ export const smActiveLink = {
   color: "red",
   borderBottom: "2px solid red",
 };
+
+export const getStyle = ({ isActive }) => (isActive ? mdActiveLink : {});
+
+export const getSmStyle = ({ isActive }) => (isActive ? smActiveLink : {});

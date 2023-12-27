@@ -4,25 +4,20 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu, RxCross1 } from "../assets/Icons";
 import SK_LOGO from "../assets/images/SK_LOGO.png";
 import {
-  mdActiveLink,
+  getSmStyle,
+  getStyle,
+  headingMain,
   mdNavlink,
   navigation,
-  smActiveLink,
   smNavilink,
 } from "../styles/NavbarStyle";
 import { useData } from "../contexts/DataContext";
+import { smLinkList } from "../utils/utlis";
 
-const Navbar = () => {
+export const Navbar = () => {
   const { hamburger, setHamburger } = useData();
   const navigate = useNavigate();
 
-  const getStyle = ({ isActive }) => {
-    return isActive ? mdActiveLink : {};
-  };
-
-  const getSmStyle = ({ isActive }) => {
-    return isActive ? smActiveLink : {};
-  };
   return (
     <div className="navbar">
       <Flex {...navigation}>
@@ -31,11 +26,7 @@ const Navbar = () => {
             navigate("/");
             setHamburger(false);
           }}
-          alignItems={"center"}
-          gap={"0.5rem"}
-          cursor={"pointer"}
-          fontWeight={"bolder"}
-          p={{ base: "0.2rem 0rem", md: "0.2rem 1rem" }}
+          {...headingMain}
         >
           <Image
             src={SK_LOGO}
@@ -51,46 +42,18 @@ const Navbar = () => {
           w={hamburger ? "55vw" : "0"}
           transition={"width 0.5s ease-in-out"}
         >
-          <NavLink
-            to="/"
-            className={hamburger ? "sm-navlink" : "none-sm-navlink"}
-            style={getSmStyle}
-            onClick={() => setHamburger(!hamburger)}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/aboutUs"
-            className={hamburger ? "sm-navlink" : "none-sm-navlink"}
-            style={getSmStyle}
-            onClick={() => setHamburger(!hamburger)}
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to="/courses"
-            className={hamburger ? "sm-navlink" : "none-sm-navlink"}
-            style={getSmStyle}
-            onClick={() => setHamburger(!hamburger)}
-          >
-            Courses
-          </NavLink>
-          <NavLink
-            to="/faq"
-            className={hamburger ? "sm-navlink" : "none-sm-navlink"}
-            style={getSmStyle}
-            onClick={() => setHamburger(!hamburger)}
-          >
-            Faq
-          </NavLink>
-          <NavLink
-            to="/contactUs"
-            className={hamburger ? "sm-navlink" : "none-sm-navlink"}
-            style={getSmStyle}
-            onClick={() => setHamburger(!hamburger)}
-          >
-            Contact Us
-          </NavLink>
+          {smLinkList.map(({ redirect, name }) => {
+            return (
+              <NavLink
+                to={redirect}
+                className={hamburger ? "sm-navlink" : "none-sm-navlink"}
+                style={getSmStyle}
+                onClick={() => setHamburger(!hamburger)}
+              >
+                {name}
+              </NavLink>
+            );
+          })}
         </Flex>
 
         <Flex display={{ base: "flex", md: "none" }}>
@@ -107,25 +70,15 @@ const Navbar = () => {
           )}
         </Flex>
         <Flex {...mdNavlink}>
-          <NavLink style={getStyle} className="md-navlink" to="/">
-            Home
-          </NavLink>
-          <NavLink style={getStyle} className="md-navlink" to="/aboutUs">
-            About Us
-          </NavLink>
-          <NavLink style={getStyle} className="md-navlink" to="/courses">
-            Courses
-          </NavLink>
-          <NavLink style={getStyle} className="md-navlink" to="/faq">
-            Faq
-          </NavLink>
-          <NavLink style={getStyle} className="md-navlink" to="/contactUs">
-            Contact Us
-          </NavLink>
+          {smLinkList.map(({ redirect, name }) => {
+            return (
+              <NavLink style={getStyle} className="md-navlink" to={redirect}>
+                {name}
+              </NavLink>
+            );
+          })}
         </Flex>
       </Flex>
     </div>
   );
 };
-
-export default Navbar;
