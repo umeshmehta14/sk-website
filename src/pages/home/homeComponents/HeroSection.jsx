@@ -34,7 +34,6 @@ export const HeroSection = () => {
           futures. Come explore with us the limitless prospects in computer
           science and programming.
         </Text>
-
         <Button {...btn}>Register Now</Button>
       </Flex>
     </Flex>

@@ -1,5 +1,5 @@
-import React from "react";
+import { Flex } from "@chakra-ui/react";
 
 export const Footer = () => {
-  return <footer>Footer</footer>;
+  return <Flex marginTop={"4rem"}>Footer</Flex>;
 };

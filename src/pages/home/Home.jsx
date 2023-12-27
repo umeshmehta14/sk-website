@@ -1,11 +1,12 @@
 import { CourseSection, HeroSection, WhyChooseSection } from "../index";
+import { Flex } from "@chakra-ui/react";
 
 export const Home = () => {
   return (
-    <main className="home-container">
+    <Flex flexDir={"column"} gap={"4rem"}>
       <HeroSection />
       <CourseSection />
       <WhyChooseSection />
-    </main>
+    </Flex>
   );
 };
