@@ -1,0 +1,49 @@
+.motion-text {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 4vw 0;
+}
+
+.motion-text::-webkit-scrollbar {
+    display: none;
+}
+
+.motion-text .con h1 {
+    font-size: 9vw;
+    display: inline-block;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation: move 10s linear infinite;
+    -webkit-animation: move 10s linear infinite;
+}
+
+.circle {
+    width: 5vw;
+    height: 5vw;
+    background-color: #E32636;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 1vw 3vw;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+
+    to {
+        transform: translate(-100%);
+        -webkit-transform: translate(-100%);
+        -moz-transform: translate(-100%);
+        -ms-transform: translate(-100%);
+        -o-transform: translate(-100%);
+    }
+
+}

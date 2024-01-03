@@ -16,9 +16,6 @@ const colors = {
   },
 };
 
-// font-family: 'Kalnia', serif;
-// font-family: 'Mukta', sans-serif;
-
 const fonts = {
   heading: "'Dancing Script', cursive",
   heading2: "'Kalnia', serif",
@@ -28,8 +25,8 @@ const fonts = {
 const styles = {
   global: (props) => ({
     "html, body": {
-      bg: "white.500",
-      color: "black.900",
+      bg: "#fff5f6",
+      color: "black",
     },
     "*::placeholder": {
       color: "gray.600",
