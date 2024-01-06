@@ -47,3 +47,9 @@
     }
 
 }
+
+@media (max-width: 768px) {
+    .motion-text .con h1 {
+        font-size: 15vw;
+    }
+}

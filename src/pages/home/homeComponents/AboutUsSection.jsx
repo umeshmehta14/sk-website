@@ -5,10 +5,10 @@ export const AboutUsSection = () => {
   return (
     <Flex
       flexDir={{ base: "column", md: "row" }}
-      gap={"5rem"}
+      gap={"4rem"}
       padding={"2vw 4vw"}
       justifyContent={"space-between"}
-      minH={"90vh"}
+      minH={{ base: "80vh", md: "90vh" }}
       alignItems={{ base: "flex-start", md: "center" }}
     >
       <Heading
@@ -27,7 +27,7 @@ export const AboutUsSection = () => {
         width={{ base: "70%", md: "25%" }}
         gap={"2rem"}
         alignItems={"center"}
-        alignSelf={"flex-end"}
+        alignSelf={{ base: "flex-start", md: "flex-end" }}
       >
         <Image
           src={side_img}

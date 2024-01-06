@@ -14,6 +14,45 @@ body {
   z-index: 1000;
 }
 
+.btn {
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+  position: relative;
+  border: 1px solid gray;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  font-weight: 200;
+}
+
+.btn a {
+  position: relative;
+  z-index: 12;
+
+}
+
+.btn:hover a {
+  color: white;
+}
+
+
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -140%;
+  background-color: black;
+  height: 60px;
+  border-radius: 50% 50% 0 0;
+  left: 0;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover::before {
+  bottom: 0%;
+}
+
 .sm-navlink {
   padding: 0.4rem 1rem;
   display: inline-block;

@@ -1,11 +1,11 @@
 import { CourseSection, HeroSection, WhyChooseSection } from "../index";
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import "./home.css";
 import { AboutUsSection } from "./homeComponents/AboutUsSection";
 
 export const Home = () => {
   return (
-    <Flex flexDir={"column"} gap={"4rem"} data-scroll-section>
+    <Flex flexDir={"column"} gap={"2rem"} data-scroll-section>
       <HeroSection />
       <CourseSection />
       <WhyChooseSection />
