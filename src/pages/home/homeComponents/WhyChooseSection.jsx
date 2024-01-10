@@ -12,7 +12,7 @@ export const WhyChooseSection = () => {
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         flexWrap={"wrap"}
-        gap={"2rem"}
+        gap={"3rem"}
         m={"auto"}
         w={{ base: "100%", md: "80%" }}
         justifyContent={"space-between"}
@@ -20,7 +20,7 @@ export const WhyChooseSection = () => {
         {WhyChooseList.map(({ heading, img, content }) => {
           return (
             <VStack key={heading} {...whyChooseBox}>
-              <VStack gap={"0.5rem"} padding={"1rem"} h={"265px"}>
+              <VStack gap={"1.5rem"} padding={"1rem"} h={"265px"}>
                 <Heading {...svgStyle}>{heading}</Heading>
                 {img}
               </VStack>

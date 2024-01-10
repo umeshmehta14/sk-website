@@ -14,30 +14,35 @@ const topCourses = [
     content:
       "Get enrolled in our Web Development course so you can shape the digital future. To build dynamic, interesting websites, become familiar with HTML, CSS, and JavaScript.",
     Img: WebDev,
+    path: "webdev",
   },
   {
     name: "Python",
     content:
       "Visit SK Computer Institute to learn more about Python. Find out what this flexible language can do for you. It's great for data science, web development, and more.",
     Img: PythonLogo,
+    path: "python",
   },
   {
     name: "React JS Mastery",
     content:
       "At SK Computer Institute, educate yourself in the world of React JS. Learn the skills of current web programming, from creating single-page apps to creating interactive user interfaces.",
     Img: ReactLogo,
+    path: "react",
   },
   {
     name: "Advance Excel",
     content:
       "Learn Advanced Excel at SK Computer Institute to improve your skills. Learn effective methods for data automation, analysis, and presentation. Gain expertise to succeed in your career.",
     Img: ExcelLogo,
+    path: "excel",
   },
   {
     name: "Tally + GST",
     content:
       "At SK Computer Institute, master tally with GST. Get a useful certification and in-depth understanding of accounting software to launch an attractive finance profession.",
     Img: TallyLogo,
+    path: "tally",
   },
 ];
 
@@ -63,12 +68,12 @@ export const CourseSection = () => {
         justifyContent={"space-evenly"}
         alignItems={"center"}
       >
-        {topCourses.map(({ name, content, Img }) => {
+        {topCourses.map(({ name, content, Img, path }) => {
           return (
             <VStack width={"100%"} maxW={"400px"} key={name}>
               <Img />
               <Text fontSize={"1.3rem"} color={"red.500"} fontWeight={"800"}>
-                {name}
+                <a href={`#${path}`}>{name}</a>
               </Text>
               <Text textAlign={"center"}>{content}</Text>
             </VStack>

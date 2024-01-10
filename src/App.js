@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 import { AboutUs, ContactUs, Courses, Faq, Home } from "./pages";
-import { Footer, Navbar, Navbar2 } from "./components";
+import { Footer, Navbar } from "./components";
 import { useRef } from "react";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       containerRef={containerRef}
     >
       <main data-scroll-container ref={containerRef} className="App">
-        <Navbar2 />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />

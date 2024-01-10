@@ -118,6 +118,38 @@ body {
   width: 10rem;
 }
 
+.s-heading {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  background-color: #E32636;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -100%;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+
+
+.s-heading:hover {
+  color: white;
+}
+
+.s-heading:hover .overlay {
+  top: 0;
+}
+
+.s-heading:hover+.detail {
+  display: flex;
+}
+
 @media (min-width: 768px) {
 
   body {

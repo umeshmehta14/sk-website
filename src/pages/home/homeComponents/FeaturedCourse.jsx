@@ -31,6 +31,7 @@ const courses = [
     Img: WebDev,
     content:
       "Explore the world of web development by becoming an expert in HTML, CSS, and JavaScript. Discover how to create responsive, dynamic websites and analyse frameworks such as Next.js and React.",
+    path: "webdev",
     list: [
       {
         icon: MdCalendarMonth,
@@ -74,6 +75,7 @@ const courses = [
     Img: ReactLogo,
     content:
       "Discover the possibilities of React JS, a well-liked JavaScript package for creating dynamic and interactive user interfaces. The goal of this course is to give students practical experience with React.",
+    path: "react",
     list: [
       {
         icon: MdCalendarMonth,
@@ -246,6 +248,8 @@ const courses = [
     Img: PythonLogo,
     content:
       "Start with the fundamentals of Python programming and work your way up to more complex ideas. Learn how to use Python's variety, evaluate data, and create apps.",
+    path: "python",
+
     list: [
       {
         icon: MdCalendarMonth,
@@ -332,6 +336,8 @@ const courses = [
     Img: TallyLogo,
     content:
       "Discover the specifics of Tally ERP9 and Prime as well as innovative Goods and Services Tax (GST) ideas for thorough financial administration.",
+    path: "tally",
+
     list: [
       {
         icon: MdCalendarMonth,
@@ -375,6 +381,7 @@ const courses = [
     Img: ExcelLogo,
     content:
       "With Advanced Excel, discover the full power of data manipulation and analysis. For effective spreadsheet administration, learn time-saving formulas, visualisation plans, and how to automate difficult processes.",
+    path: "excel",
     list: [
       {
         icon: MdCalendarMonth,
@@ -584,8 +591,13 @@ const courses = [
 
 export const FeaturedCourse = () => {
   return (
-    <Flex direction={"column"} p={"0 1.5rem"} id="courses" gap={"5rem"}>
-      <Flex gap={"1rem"} alignItems={"center"}>
+    <Flex
+      direction={"column"}
+      p={"0 1.5rem"}
+      id="courses"
+      gap={{ base: "5rem", md: 0 }}
+    >
+      <Flex gap={"1rem"} alignItems={"center"} marginBottom={"3rem"}>
         <Text
           w="20px"
           h={"20px"}
@@ -596,17 +608,43 @@ export const FeaturedCourse = () => {
           Featured Courses
         </Text>
       </Flex>
-      {courses.map(({ name, Img, content, list }) => {
+      {courses.map(({ name, Img, content, list, path }) => {
         return (
           <Flex
-            flexDir={"column"}
+            flexDir={{ base: "column-reverse", md: "column" }}
             key={name}
-            paddingBottom={"1rem"}
-            borderBottom={"1px solid gray"}
-            maxW={"343px"}
-            maxH={"696px"}
+            paddingBottom={{ base: "1rem", md: 0 }}
+            borderBottom={{ base: "1px solid gray", md: "none" }}
+            id={path ? path : ""}
+            pos={"relative"}
+            alignItems={"center"}
           >
             <Flex
+              className="s-heading"
+              pos={"relative"}
+              borderTop={{ base: "none", md: "1px solid gray" }}
+              p={{ base: "0", md: "1.5rem 1rem" }}
+              overflow={"hidden"}
+              w={"100%"}
+            >
+              <Box
+                className="overlay"
+                display={{ base: "none", md: "block" }}
+              />
+              <Heading
+                fontSize={{ base: "1.5rem", md: "2.2rem" }}
+                fontFamily={"heading2"}
+                pos={"relative"}
+                zIndex={1}
+                fontWeight={"bold"}
+              >
+                {name}
+              </Heading>
+            </Flex>
+            <Flex
+              className="detail"
+              w={"100%"}
+              display={{ base: "flex", md: "none" }}
               flexDir={"column"}
               padding={"1.5rem 0.5rem"}
               borderRadius={"12px"}
@@ -614,6 +652,12 @@ export const FeaturedCourse = () => {
               gap={"1rem"}
               backgroundColor={"white"}
               marginBottom={"2rem"}
+              maxW={"343px"}
+              maxH={"696px"}
+              pos={{ base: "static", md: "absolute" }}
+              zIndex={"12"}
+              top={"-100%"}
+              pointerEvents={"none"}
             >
               <Box>
                 <Img />
@@ -638,9 +682,6 @@ export const FeaturedCourse = () => {
                 })}
               </Flex>
             </Flex>
-            <Heading fontSize={"1.5rem"} fontFamily={"heading2"}>
-              {name}
-            </Heading>
           </Flex>
         );
       })}
