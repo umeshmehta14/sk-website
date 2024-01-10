@@ -26,7 +26,7 @@
     background-color: #E32636;
     display: inline-block;
     border-radius: 50%;
-    margin: 1vw 3vw;
+    margin: 1vw 3vw 0;
 }
 
 @keyframes move {

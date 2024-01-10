@@ -1,12 +1,12 @@
-import { Flex, Text, Heading } from "@chakra-ui/react";
+import { Flex, Text, Heading, Box } from "@chakra-ui/react";
 
-// import { hero_img } from "../../../assets/images";
+import { IoIosArrowRoundForward } from "../../../assets/Icons";
 // import { btn, heroContentMain } from "../../../styles/HomeStyles";
 
 export const HeroSection = () => {
   return (
     <Flex
-      height={{ base: "60vh", md: "80vh" }}
+      height={{ base: "70vh", md: "80vh" }}
       flexDir={{ base: "column", md: "row-reverse" }}
       padding={"2vw 4vw"}
       gap={"3rem"}
@@ -22,17 +22,30 @@ export const HeroSection = () => {
       >
         TECH & TRADE Raising Dreams
       </Heading>
-      <Text
-        width={{ base: "60%", md: "30%" }}
-        fontSize={"1.2rem"}
-        lineHeight={"1.2"}
-        fontWeight={"600"}
+      <Flex
+        flexDir={"column"}
         alignSelf={{ base: "flex-start", md: "flex-end" }}
+        width={{ base: "60%", md: "30%" }}
+        alignItems={"center"}
+        gap={"1rem"}
       >
-        Providing professional advice and practical experience to empower
-        futures. Come explore with us the limitless prospects in computer
-        science and programming.
-      </Text>
+        <Flex
+          className="btn"
+          width={{ base: "70%", md: "45%" }}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          fontFamily={"heading2"}
+          fontWeight={"900"}
+        >
+          <a href="/">Register Now</a>
+          <Box as={IoIosArrowRoundForward} fontSize={"2rem"} />
+        </Flex>
+        <Text fontSize={"1.2rem"} lineHeight={"1.2"} fontWeight={"600"}>
+          Providing professional advice and practical experience to empower
+          futures. Come explore with us the limitless prospects in computer
+          science and programming.
+        </Text>
+      </Flex>
     </Flex>
   );
 };

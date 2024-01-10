@@ -3,7 +3,7 @@ import { Flex, Image, Text, VStack } from "@chakra-ui/react";
 import {
   excelLogo,
   PythonLogo,
-  reactLogo,
+  ReactLogo,
   tallyLogo,
   WebDev,
 } from "../../../assets/images";
@@ -55,7 +55,7 @@ export const CourseSection = () => {
         </VStack>
 
         <VStack width={"100%"} maxW={"400px"}>
-          <Image src={reactLogo} alt="React" width={"100px"} />
+          <ReactLogo />
           <Text fontSize={"1.3rem"} color={"red.500"} fontWeight={"800"}>
             React JS Mastery
           </Text>

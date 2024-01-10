@@ -4,6 +4,7 @@ import { side_img } from "../../../assets/images";
 export const AboutUsSection = () => {
   return (
     <Flex
+      id="aboutUs"
       flexDir={{ base: "column", md: "row" }}
       gap={"4rem"}
       padding={"2vw 4vw"}

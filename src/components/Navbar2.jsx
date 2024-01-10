@@ -1,9 +1,9 @@
 import { Box, Flex, Image, Text, Heading } from "@chakra-ui/react";
 
-import { SK_LOGO } from "../assets/images";
 import { FaGripLines, RxCross1 } from "../assets/Icons";
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { SK_LOGO } from "../assets/images";
 
 export const Navbar2 = () => {
   const [menuClick, setMenuClick] = useState(false);
@@ -13,6 +13,7 @@ export const Navbar2 = () => {
     setMenuClick(!menuClick);
     document.body.style.overflow = menuClick ? "auto" : "hidden";
   };
+
   return (
     <Box pos={"relative"} top={0}>
       <Flex
@@ -78,7 +79,10 @@ export const Navbar2 = () => {
           display={{ base: "none", md: "flex" }}
         >
           <Box className="btn">
-            <NavLink to="/courses">Courses</NavLink>
+            <a href="#aboutUs">About Us</a>
+          </Box>
+          <Box className="btn">
+            <a href="#courses">Courses</a>
           </Box>
           <Box className="btn">
             <NavLink to="/faq">FAQ</NavLink>
@@ -115,7 +119,7 @@ export const Navbar2 = () => {
             fontSize={"3.2rem"}
             onClick={() => setMenuClick(!menuClick)}
           >
-            <NavLink to="/courses">Courses</NavLink>
+            <a href="#courses">Courses</a>
           </Heading>
           <Heading
             fontFamily={"heading2"}

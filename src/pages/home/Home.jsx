@@ -2,6 +2,7 @@ import { CourseSection, HeroSection, WhyChooseSection } from "../index";
 import { Flex } from "@chakra-ui/react";
 import "./home.css";
 import { AboutUsSection } from "./homeComponents/AboutUsSection";
+import { FeaturedCourse } from "./homeComponents/FeaturedCourse";
 
 export const Home = () => {
   return (
@@ -38,6 +39,7 @@ export const Home = () => {
         </div>
       </div>
       <AboutUsSection />
+      <FeaturedCourse />
     </Flex>
   );
 };
