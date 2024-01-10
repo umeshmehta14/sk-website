@@ -39,6 +39,7 @@ body {
 
 
 
+
 .btn::before {
   content: "";
   position: absolute;
@@ -111,6 +112,10 @@ body {
   width: 96px;
   background-color: #ff3c4c;
   border-radius: 16px;
+}
+
+.img {
+  width: 10rem;
 }
 
 @media (min-width: 768px) {

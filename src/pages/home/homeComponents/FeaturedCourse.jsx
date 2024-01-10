@@ -1,9 +1,15 @@
 import { Box, Text, Flex, Heading } from "@chakra-ui/react";
 
 import {
+  BasicComputer,
+  CpctLogo,
+  DcaLogo,
+  ExcelLogo,
   JavaLogo,
   MernStack,
+  PgdcaLogo,
   PythonLogo,
+  TallyLogo,
   WebDev,
 } from "../../../assets/images";
 import {
@@ -64,7 +70,7 @@ const courses = [
     ],
   },
   {
-    name: "REACT JS (FrontEnd)",
+    name: "REACT JS (FRONTEND)",
     Img: ReactLogo,
     content:
       "Discover the possibilities of React JS, a well-liked JavaScript package for creating dynamic and interactive user interfaces. The goal of this course is to give students practical experience with React.",
@@ -323,7 +329,7 @@ const courses = [
   },
   {
     name: "TALLY & ADVANCE GST",
-    Img: PythonLogo,
+    Img: TallyLogo,
     content:
       "Discover the specifics of Tally ERP9 and Prime as well as innovative Goods and Services Tax (GST) ideas for thorough financial administration.",
     list: [
@@ -360,7 +366,217 @@ const courses = [
       {
         icon: FaRupeeSign,
         name: "Fees",
-        Ans: "₹4000",
+        Ans: "₹4,000",
+      },
+    ],
+  },
+  {
+    name: "ADVANCE EXCEL",
+    Img: ExcelLogo,
+    content:
+      "With Advanced Excel, discover the full power of data manipulation and analysis. For effective spreadsheet administration, learn time-saving formulas, visualisation plans, and how to automate difficult processes.",
+    list: [
+      {
+        icon: MdCalendarMonth,
+        name: "Course Duration",
+        Ans: "1.5 Months",
+      },
+      {
+        icon: FaClock,
+        name: "Lecture Duration",
+        Ans: "1 Hour",
+      },
+      {
+        icon: FaRev,
+        name: "Practice Session",
+        Ans: "0.5 Hour",
+      },
+      {
+        icon: FaLevelUpAlt,
+        name: "Prerequisite",
+        Ans: "Basic Excel",
+      },
+      {
+        icon: FaLanguage,
+        name: "Language",
+        Ans: "English/Hindi",
+      },
+      {
+        icon: FaCertificate,
+        name: "Certificate",
+        Ans: "Yes",
+      },
+      {
+        icon: FaRupeeSign,
+        name: "Fees",
+        Ans: "₹2,500",
+      },
+    ],
+  },
+  {
+    name: "BASIC COMPUTER",
+    Img: BasicComputer,
+    content:
+      "Get a strong foundation in computer basics before moving on to more complex subjects. Cover everything, from hardware component awareness to basic software skills.",
+    list: [
+      {
+        icon: MdCalendarMonth,
+        name: "Course Duration",
+        Ans: "3 Months",
+      },
+      {
+        icon: FaClock,
+        name: "Lecture Duration",
+        Ans: "1 Hour",
+      },
+      {
+        icon: FaRev,
+        name: "Practice Session",
+        Ans: "0.5 Hour",
+      },
+      {
+        icon: FaLevelUpAlt,
+        name: "Prerequisite",
+        Ans: "Beginner Level",
+      },
+      {
+        icon: FaLanguage,
+        name: "Language",
+        Ans: "English/Hindi",
+      },
+      {
+        icon: FaCertificate,
+        name: "Certificate",
+        Ans: "Yes",
+      },
+      {
+        icon: FaRupeeSign,
+        name: "Fees",
+        Ans: "₹3,000",
+      },
+    ],
+  },
+  {
+    name: "DCA",
+    Img: DcaLogo,
+    content:
+      "Enrol in an intensive one-year diploma course that covers a range of computer application topics. Gain theoretical knowledge and practical skills by following a Makhanlal University-designed the course.",
+    list: [
+      {
+        icon: MdCalendarMonth,
+        name: "Course Duration",
+        Ans: "1 Year",
+      },
+      {
+        icon: FaClock,
+        name: "Lecture Duration",
+        Ans: "1 Hour",
+      },
+      {
+        icon: FaRev,
+        name: "Practice Session",
+        Ans: "0.5 Hour",
+      },
+      {
+        icon: FaLevelUpAlt,
+        name: "Prerequisite",
+        Ans: "Basic Computer",
+      },
+      {
+        icon: FaLanguage,
+        name: "Language",
+        Ans: "English/Hindi",
+      },
+      {
+        icon: FaCertificate,
+        name: "Certificate",
+        Ans: "Yes",
+      },
+      {
+        icon: FaRupeeSign,
+        name: "Fees",
+        Ans: "₹8,000",
+      },
+    ],
+  },
+  {
+    name: "PGDCA",
+    Img: PgdcaLogo,
+    content:
+      "Obtain a one-year postgraduate diploma to develop your computer skills. Advanced topics in computer applications are explored in this programme, which is associated with Makhanlal University.",
+    list: [
+      {
+        icon: MdCalendarMonth,
+        name: "Course Duration",
+        Ans: "1 Year",
+      },
+      {
+        icon: FaClock,
+        name: "Lecture Duration",
+        Ans: "1 Hour",
+      },
+      {
+        icon: FaRev,
+        name: "Practice Session",
+        Ans: "0.5 Hour",
+      },
+      {
+        icon: FaLevelUpAlt,
+        name: "Prerequisite",
+        Ans: "DCA",
+      },
+      {
+        icon: FaLanguage,
+        name: "Language",
+        Ans: "English/Hindi",
+      },
+      {
+        icon: FaCertificate,
+        name: "Certificate",
+        Ans: "Yes",
+      },
+      {
+        icon: FaRupeeSign,
+        name: "Fees",
+        Ans: "₹10,000",
+      },
+    ],
+  },
+  {
+    name: "CPCT COURSE",
+    Img: CpctLogo,
+    content:
+      "Enrol in a specialised course to help you prepare for the Computer Proficiency Certification Test (CPCT). Improve your efficiency, computer literacy, and typing speed.",
+    list: [
+      {
+        icon: FaClock,
+        name: "Lecture Duration",
+        Ans: "0.5 Hour",
+      },
+      {
+        icon: FaRev,
+        name: "Practice Session",
+        Ans: "1 Hour",
+      },
+      {
+        icon: FaLevelUpAlt,
+        name: "Prerequisite",
+        Ans: "Basic Computer",
+      },
+      {
+        icon: FaLanguage,
+        name: "Language",
+        Ans: "English/Hindi",
+      },
+      {
+        icon: FaCertificate,
+        name: "Certificate",
+        Ans: "No",
+      },
+      {
+        icon: FaRupeeSign,
+        name: "Fees",
+        Ans: "₹1,000 /month",
       },
     ],
   },
@@ -368,7 +584,7 @@ const courses = [
 
 export const FeaturedCourse = () => {
   return (
-    <Flex direction={"column"} p={"0 1.5rem"} id="courses">
+    <Flex direction={"column"} p={"0 1.5rem"} id="courses" gap={"5rem"}>
       <Flex gap={"1rem"} alignItems={"center"}>
         <Text
           w="20px"
@@ -376,54 +592,55 @@ export const FeaturedCourse = () => {
           backgroundColor={"#E32636"}
           borderRadius={"50%"}
         />
-        <Text fontSize={"1.5rem"} fontWeight={"600"}>
+        <Text fontSize={"1.5rem"} fontWeight={"400"}>
           Featured Courses
         </Text>
       </Flex>
       {courses.map(({ name, Img, content, list }) => {
         return (
-          <Flex flexDir={"column"} gap={"2rem"} key={name}>
-            <Box>
-              <Flex
-                flexDir={"column"}
-                padding={"1.5rem 0.5rem"}
-                borderRadius={"12px"}
-                alignItems={"center"}
-                gap={"1rem"}
-                backgroundColor={"white"}
-                marginBottom={"2rem"}
-              >
-                <Box>
-                  <Img />
-                </Box>
-                <Flex flexDir={"column"} gap={"0.5rem"}>
-                  <Text>{content}</Text>
-                  {list.map(({ icon, name, Ans }) => {
-                    return (
-                      <Flex
-                        justifyContent={"space-between"}
-                        fontSize={"1.1rem"}
-                        padding={"0.2rem 0"}
-                        key={name}
-                      >
-                        <Flex gap={"0.5rem"}>
-                          <Box
-                            as={icon}
-                            fontSize={"1.5rem"}
-                            color={"#E32636"}
-                          />
-                          <strong>{name}</strong>
-                        </Flex>
-                        <Text>{Ans}</Text>
+          <Flex
+            flexDir={"column"}
+            key={name}
+            paddingBottom={"1rem"}
+            borderBottom={"1px solid gray"}
+            maxW={"343px"}
+            maxH={"696px"}
+          >
+            <Flex
+              flexDir={"column"}
+              padding={"1.5rem 0.5rem"}
+              borderRadius={"12px"}
+              alignItems={"center"}
+              gap={"1rem"}
+              backgroundColor={"white"}
+              marginBottom={"2rem"}
+            >
+              <Box>
+                <Img />
+              </Box>
+              <Flex flexDir={"column"} gap={"0.5rem"}>
+                <Text>{content}</Text>
+                {list.map(({ icon, name, Ans }) => {
+                  return (
+                    <Flex
+                      justifyContent={"space-between"}
+                      fontSize={"1.1rem"}
+                      padding={"0.2rem 0"}
+                      key={name}
+                    >
+                      <Flex gap={"0.5rem"}>
+                        <Box as={icon} fontSize={"1.5rem"} color={"#E32636"} />
+                        <strong>{name}</strong>
                       </Flex>
-                    );
-                  })}
-                </Flex>
+                      <Text>{Ans}</Text>
+                    </Flex>
+                  );
+                })}
               </Flex>
-              <Heading fontSize={"1.5rem"} fontFamily={"heading2"}>
-                {name}
-              </Heading>
-            </Box>
+            </Flex>
+            <Heading fontSize={"1.5rem"} fontFamily={"heading2"}>
+              {name}
+            </Heading>
           </Flex>
         );
       })}

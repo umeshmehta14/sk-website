@@ -2,8 +2,27 @@ import { Box, Flex, Image, Text, Heading } from "@chakra-ui/react";
 
 import { FaGripLines, RxCross1 } from "../assets/Icons";
 import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SK_LOGO } from "../assets/images";
+
+const navLinks = [
+  {
+    name: "About Us",
+    path: "#aboutUs",
+  },
+  {
+    name: "Courses",
+    path: "#courses",
+  },
+  {
+    name: "FAQ",
+    path: "#faq",
+  },
+  {
+    name: "Contact Us",
+    path: "#contactUs",
+  },
+];
 
 export const Navbar2 = () => {
   const [menuClick, setMenuClick] = useState(false);
@@ -13,7 +32,6 @@ export const Navbar2 = () => {
     setMenuClick(!menuClick);
     document.body.style.overflow = menuClick ? "auto" : "hidden";
   };
-
   return (
     <Box pos={"relative"} top={0}>
       <Flex
@@ -78,18 +96,13 @@ export const Navbar2 = () => {
           gap={"1.5rem"}
           display={{ base: "none", md: "flex" }}
         >
-          <Box className="btn">
-            <a href="#aboutUs">About Us</a>
-          </Box>
-          <Box className="btn">
-            <a href="#courses">Courses</a>
-          </Box>
-          <Box className="btn">
-            <NavLink to="/faq">FAQ</NavLink>
-          </Box>
-          <Box className="btn">
-            <NavLink to="/contactUs">Contact Us</NavLink>
-          </Box>
+          {navLinks.map(({ name, path }) => {
+            return (
+              <Box className="btn" key={name}>
+                <a href={path}>{name}</a>
+              </Box>
+            );
+          })}
         </Flex>
       </Flex>
       <Box
@@ -114,27 +127,18 @@ export const Navbar2 = () => {
           flexDirection={"column"}
           p={"9vw 4vw"}
         >
-          <Heading
-            fontFamily={"heading2"}
-            fontSize={"3.2rem"}
-            onClick={() => setMenuClick(!menuClick)}
-          >
-            <a href="#courses">Courses</a>
-          </Heading>
-          <Heading
-            fontFamily={"heading2"}
-            fontSize={"3.2rem"}
-            onClick={() => setMenuClick(!menuClick)}
-          >
-            <NavLink to="/faq">FAQ</NavLink>
-          </Heading>
-          <Heading
-            fontFamily={"heading2"}
-            fontSize={"3.2rem"}
-            onClick={() => setMenuClick(!menuClick)}
-          >
-            <NavLink to="/contactUs">Contact Us</NavLink>
-          </Heading>
+          {navLinks.map(({ name, path }) => {
+            return (
+              <Heading
+                fontFamily={"heading2"}
+                fontSize={"2.5rem"}
+                onClick={handleMenuClick}
+                key={name}
+              >
+                <a href={path}>{name}</a>
+              </Heading>
+            );
+          })}
         </Flex>
       </Box>
     </Box>

@@ -36,6 +36,7 @@ export const HeroSection = () => {
           justifyContent={"space-between"}
           fontFamily={"heading2"}
           fontWeight={"900"}
+          minW={"165px"}
         >
           <a href="/">Register Now</a>
           <Box as={IoIosArrowRoundForward} fontSize={"2rem"} />

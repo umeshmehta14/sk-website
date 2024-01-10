@@ -19,7 +19,7 @@ export const WhyChooseSection = () => {
       >
         {WhyChooseList.map(({ heading, img, content }) => {
           return (
-            <VStack {...whyChooseBox}>
+            <VStack key={heading} {...whyChooseBox}>
               <VStack gap={"0.5rem"} padding={"1rem"} h={"265px"}>
                 <Heading {...svgStyle}>{heading}</Heading>
                 {img}
